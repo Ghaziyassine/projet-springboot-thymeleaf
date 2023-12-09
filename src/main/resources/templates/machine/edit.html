@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Machine</title>
+</head>
+
+<body>
+
+    <h2>Edit Machine</h2>
+
+    <form action="@{/machines/update/{id}(id=${machine.id})}" method="post" th:object="${machine}" th:action="@{/machines/update/{id}(id=${machine.id})}">
+        <label for="reference">Reference:</label>
+        <input type="text" id="reference" th:field="*{reference}" />
+
+        <label for="marque">Marque:</label>
+        <input type="text" id="marque" th:field="*{marque}" />
+
+        <label for="dateAchat">Date Achat:</label>
+        <input type="date" id="dateAchat" th:field="*{dateAchat}" />
+
+        <label for="prix">Prix:</label>
+        <input type="text" id="prix" th:field="*{prix}" />
+
+        <label for="employe">Select Employe:</label>
+        <select id="employe" th:field="*{employe.id}" class="form-control">
+            <option th:each="employee : ${employes}" th:value="${employee.id}"
+                th:text="${employee.nom + ' ' + employee.prenom}" th:selected="${employee.id eq machine.employe.id}"></option>
+        </select>
+
+        <button type="submit">Save</button>
+    </form>
+
+    <a th:href="@{/machines}">Back to Machine List</a>
+
+</body>
+
+</html>

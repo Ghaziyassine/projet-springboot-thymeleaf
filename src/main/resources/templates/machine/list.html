@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Machine List</title>
+</head>
+
+<body>
+    <h1>Machine List</h1>
+
+    <!-- Filter by Employé Form -->
+    <form action="/machines/filtres" method="get">
+        <label for="employeId">Filtrer par Employé:</label>
+        <select id="employeId" name="employeId" class="form-control">
+            <option value="">Tous les employés</option>
+            <option th:each="employee : ${employes}" th:value="${employee.id}"
+                th:text="${employee.nom + ' ' + employee.prenom}"></option>
+        </select>
+        <button type="submit">Filtrer</button>
+    </form>
+
+    <!-- Sorting by Date Form -->
+    <form action="/machines/sortByDate" method="get">
+        <label for="sortOrder">Trier par Date:</label>
+        <select id="sortOrder" name="sortOrder" class="form-control">
+            <option value="asc">Ascendant</option>
+            <option value="desc">Descendant</option>
+        </select>
+        <button type="submit">Trier</button>
+    </form>
+    
+
+
+
+    <table>
+        <!-- Table headers -->
+        <tr>
+            <th>ID</th>
+            <th>Reference</th>
+            <th>Marque</th>
+            <th>Date Achat</th>
+            <th>Prix</th>
+            <th>Employe</th>
+            <th>Actions</th>
+        </tr>
+
+        <!-- Table rows -->
+        <tr th:each="machine : ${machines}">
+            <td th:text="${machine.id}"></td>
+            <td th:text="${machine.reference}"></td>
+            <td th:text="${machine.marque}"></td>
+            <td th:text="${machine.dateAchat}"></td>
+            <td th:text="${machine.prix}"></td>
+            <td th:text="${machine.employe.nom + ' ' + machine.employe.prenom}"></td>
+            <td>
+                <a th:href="@{/machines/edit/{id}(id=${machine.id})}">Edit</a>
+                <a th:href="@{/machines/delete/{id}(id=${machine.id})}">Delete</a>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Create Machine and Back to Home links -->
+    <a th:href="@{/machines/create}">Create Machine</a>
+    <a th:href="@{/}">Back to Home</a>
+
+</body>
+
+</html>

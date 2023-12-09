@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Machines Assigned to Employee</title>
+</head>
+
+<body>
+    <h1>Machines Assigned to Employee</h1>
+    <form th:action="@{/machines/machinesByEmploye}" method="get">
+        <select id="employeId" name="employeId" class="form-control">
+            <option value="">Select an Employee</option>
+            <option th:each="employee : ${employees}" th:value="${employee.id}"
+                th:text="${employee.nom + ' ' + employee.prenom}"></option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+    <h2>Employee Information:</h2>
+    <p th:text="${employe.nom + ' ' + employe.prenom}"></p>
+
+    <h2>Assigned Machines:</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Reference</th>
+            <th>Marque</th>
+            <th>Date Achat</th>
+            <th>Prix</th>
+        </tr>
+        <tr th:each="machine : ${machines}">
+            <td th:text="${machine.id}"></td>
+            <td th:text="${machine.reference}"></td>
+            <td th:text="${machine.marque}"></td>
+            <td th:text="${machine.dateAchat}"></td>
+            <td th:text="${machine.prix}"></td>
+        </tr>
+    </table>
+
+    <a th:href="@{/}">Back to Home</a>
+</body>
+
+</html>
