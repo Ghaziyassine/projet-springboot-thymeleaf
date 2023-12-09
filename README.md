@@ -67,8 +67,9 @@ This project aims to develop a simple application for assigning machines to empl
 - HTML,css,javascript
 - Thymeleaf for server-side templating
 - Chart.js for creating charts
+
 **Database:**
-- Msql
+- Mysql
 
 
 
