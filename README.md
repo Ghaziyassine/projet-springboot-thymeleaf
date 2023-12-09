@@ -90,7 +90,14 @@ https://github.com/Ghaziyassine/projet-springboot-thymeleaf/assets/114885285/850
 - **Machine Section**
 ![image](https://github.com/Ghaziyassine/projet-springboot-thymeleaf/assets/114885285/467ff08c-2159-443a-aacb-ebdbe48ce380)
 
+- Machine CRUD operations
 
+
+
+https://github.com/Ghaziyassine/projet-springboot-thymeleaf/assets/114885285/786e477e-a750-4eb9-a466-0edc6ca03453
+
+
+  
 -  Filter machines by employee
 
 
