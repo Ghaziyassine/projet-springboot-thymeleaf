@@ -1,30 +1,56 @@
-# projet-springboot-thymeleaf
 # Employee and Machine Management System
-## Table des matières
+## Table of Contents
 
 - [Introduction](#introduction)
 - [Features](#features)
-- [Installation](#installation)
-- [ScreenShots ](#screenShots)
-- [Usage](#usage)
-- [Contributing](#contributing)
+- [Technologies Used](#technologies-used)
+- [ScreenShots ](#screen-shots)
+- [Authors](#authors)
   
 
-## Description
+## Introduction
 
 This project aims to develop a simple application for assigning machines to employees. The application will be built using Thymeleaf and Spring Boot.
 
-### Features
+## Features
 
-1. **CRUD Operations:**
-   - Manage employees and machines with Create, Read, Update, and Delete operations.
+1. **Employee Management:**
+    - View a list of employees.
+    - Create a new employee.
+    - Edit existing employee details.
+    - Delete an employee.
 
-2. **Filter Machines Lsit by Employee:**
-   - Search for machines assigned to a specific employee.
+2. **Machine Management:**
+    - View a list of machines.
+    - Create a new machine.
+    - Edit existing machine details.
+    - Delete a machine.
 
-3. **Graphical Representation:**
-   - View a graph illustrating the number of machines aquired per year.
+3. **Filter and Sort:**
+    - Filter machines by employee.
+    - Sort machines by date of acquisition.
 
+4. **Graphical Representation:**
+    - Display a bar chart illustrating machines acquired per year.
+
+5. **User Interface:**
+    - Clean and responsive UI design.
+    - Separate pages for employee and machine management.
+
+6. **Navigation:**
+    - Easy navigation with a main menu.
+    - Links to switch between employee and machine sections.
+
+7. **Integration with Chart.js:**
+    - Utilize Chart.js library to create graphical representations.
+    
+
+8. **Thymeleaf Templating:**
+    - Utilize Thymeleaf for server-side templating.
+
+9. **Spring Boot Framework:**
+    - Built using the Spring Boot framework.
+    - Leveraging Spring MVC for handling web requests.
 
 
 
@@ -45,29 +71,47 @@ This project aims to develop a simple application for assigning machines to empl
 - Msql
 
 
-## Project Configuration
 
-Before modifying `persistence.xml` and `glassfish-resources.xml`, ensure that the JDBC pool and JDBC resources are configured in GlassFish.
 
-### JDBC Pool Configuration (example):
+## Screen Shots 
+- **Home page**
 
-- Pool Name: `YourPoolName`
-- Resource Type: `java.sql.Driver`
-- Driver Classname: `com.mysql.jdbc.Driver`
-- Additional Properties: 
-  - `user = your-mysql-username`
-  - `password = your-mysql-password`
-  - `databaseName = your-database-name`
-  - `portNumber = your-mysql-port`
-  - `Url = jdbc:mysql://your-mysql-host:your-mysql-port/your-database-name`
+![image](https://github.com/Ghaziyassine/projet-springboot-thymeleaf/assets/114885285/7b3663d0-2696-4641-a3a2-7f7a43e75f92)
 
-### JDBC Resource Configuration (example):
+- **Employe Section**
 
-- JNDI Name: `jdbc/YourDataSource`
-- Pool Name: `YourPoolName`
+![image](https://github.com/Ghaziyassine/projet-springboot-thymeleaf/assets/114885285/7fbb8918-8f82-4665-beeb-31c83cd61e4d)
 
-## ScreenShots 
+-Employe CRUD operations
 
+https://github.com/Ghaziyassine/projet-springboot-thymeleaf/assets/114885285/850717a0-6fe0-47dd-aeb1-d5842f329e97
+
+- **Machine Section**
+![image](https://github.com/Ghaziyassine/projet-springboot-thymeleaf/assets/114885285/467ff08c-2159-443a-aacb-ebdbe48ce380)
+
+
+-  Filter machines by employee
+
+
+https://github.com/Ghaziyassine/projet-springboot-thymeleaf/assets/114885285/13f47fae-a328-4f21-87a4-2d74edf675c7
+
+- Sort machines by date of acquisition
+  
+
+
+https://github.com/Ghaziyassine/projet-springboot-thymeleaf/assets/114885285/25e80f3d-7e67-40ad-9c6d-449339e318f9
+
+ - Display a bar chart illustrating machines acquired per year
+
+
+
+https://github.com/Ghaziyassine/projet-springboot-thymeleaf/assets/114885285/2a1fb738-23e0-49ce-b96c-e1c790d7172b
+
+
+- Searching the machines Assigned to an Employee
+
+
+https://github.com/Ghaziyassine/projet-springboot-thymeleaf/assets/114885285/43a4c45d-76be-4fbe-bbed-c57ed08d0f57
 
 
 
