@@ -117,7 +117,6 @@ https://github.com/Ghaziyassine/projet-springboot-thymeleaf/assets/114885285/43a
 
 
 ## Authors
-
-- Mohamed Fezzazi ([MaskedFezz](https://github.com/MaskedFezz))
 - Ghita Baghdad ([ghita-baghdad](https://github.com/ghita-baghdad))
+- Mohamed Fezzazi ([MaskedFezz](https://github.com/MaskedFezz))
 - Yassine Ghazi ([Ghaziyassine](https://github.com/Ghaziyassine))
