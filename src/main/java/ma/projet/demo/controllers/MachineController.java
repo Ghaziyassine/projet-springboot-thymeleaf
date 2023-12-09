@@ -27,6 +27,8 @@ public class MachineController {
     public String listMachines(Model model) {
         List<Machine> machines = machineRepository.findAll();
         model.addAttribute("machines", machines);
+        model.addAttribute("employes", employeRepository.findAll());
+
         return "machine/list";
     }
 
@@ -155,18 +157,6 @@ public class MachineController {
         }
     }
 
-    @GetMapping("/")
-public String index(Model model) {
-    List<Machine> machinesData = machineRepository.findAll();
-
-    if (machinesData != null) {
-        System.out.println("Number of Machines: " + machinesData.size());
-    } else {
-        System.out.println("Machines Data is NULL");
-    }
-
-    model.addAttribute("machinesData", machinesData);
-    return "index";
-}
+ 
 
 }
